@@ -979,6 +979,7 @@
 				position: relative;
 				flex: 1 1 calc(33% - 20px);
 				max-width: calc(33% - 20px);
+        			height: 90vw;
 				background: #222;
 				border-radius: 10px;
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
