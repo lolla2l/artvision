@@ -1,4 +1,4 @@
-		@font-face {
+				@font-face {
   			font-family: 'Gilroy';
   			src: url('fonts/Gilroy-Light.otf') format('opentype');
   			font-weight: 300; /* Light */
@@ -21,30 +21,35 @@
 
 		h1 {
 			font-size: 3.5em;
+			font-weight: 800; /* ExtraBold */
 			margin-bottom: 20px;
 			flex: 1 1 100%;
 		}
 
 		h2 {
 			font-size: 2em;
+			font-weight: 800; /* ExtraBold */
 			margin-bottom: 15px;
 			flex: 1 1 100%;
 		}
 
 		h3 {
 			font-size: 1em;
+			font-weight: 800; /* ExtraBold */
 			margin-bottom: 15px;
 			flex: 1 1 100%;
 		}
 
 		p {
 			font-size: 1em;
+			font-weight: 300; /* Light */
 			margin-bottom: 15px;
 			flex: 1 1 100%;
 		}
 
 		p1 {
 			font-size: 0.6em;
+			font-weight: 300; /* Light */
 			margin-bottom: 15px;
 			flex: 1 1 100%;
 		}
