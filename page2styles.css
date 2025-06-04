@@ -8,7 +8,7 @@
 		@font-face {
   			font-family: 'Gilroy';
   			src: url('fonts/Gilroy-Extrabold.otf') format('opentype');
-  			font-weight: 800; /* ExtraBold */
+  			font-weight: bold; /* ExtraBold */
   			font-style: normal;
 			}
 		body {
@@ -21,21 +21,21 @@
 
 		h1 {
 			font-size: 3.5em;
-			font-weight: 800; /* ExtraBold */
+			font-weight: bold; /* ExtraBold */
 			margin-bottom: 20px;
 			flex: 1 1 100%;
 		}
 
 		h2 {
 			font-size: 2em;
-			font-weight: 800; /* ExtraBold */
+			font-weight: bold; /* ExtraBold */
 			margin-bottom: 15px;
 			flex: 1 1 100%;
 		}
 
 		h3 {
 			font-size: 1em;
-			font-weight: 800; /* ExtraBold */
+			font-weight: bold; /* ExtraBold */
 			margin-bottom: 15px;
 			flex: 1 1 100%;
 		}
