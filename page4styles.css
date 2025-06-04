@@ -1111,5 +1111,21 @@
 				font-size: 0.9em;
 			}
 
+			.comment-actions {
+			margin-top: 8px;
+			display: flex;
+			gap: 5px;
+		}
+
+		.comment-actions button {
+			background: none;
+			border: none;
+			color: #ccc;
+			cursor: pointer;
+			font-size: 0.5em;
+			display: flex;
+			align-items: center;
+		}
+
 		}
 
