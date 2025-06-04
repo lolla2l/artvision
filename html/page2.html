@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="page2styles.css">
+	<title> Художники сюрреалисты</title>
+</head>
+
+<body>
+	<button id="back-to-home" aria-label="Вернуться на главную" style="display:none;">↑</button>
+	</button>
+	<div class="container">
+		<div class="left-sidebar">
+			<div class="logo">
+				<img src="лого.png" alt="Art Logo" style="width:172px; height:34px;" />
+            </div>
+				<ul class="profile-list">
+					<li>
+						<button onclick="window.location.href='index.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка1.jpg" alt="Рене Магритт" title="Рене Магритт" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page2.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка2.jpeg" alt="Макс Эрнест" title="Макс Эрнест" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page3.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка3.jpg" alt="Artist 3" title="Artist 3" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page4.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка4.jpg" alt="Artist 4" title="Artist 4" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page5.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка5.jpg" alt="Artist 5" title="Artist 5" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page6.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка6.jpg" alt="Artist 6" title="Artist 6" />
+                    </button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="main-content">
+				<header>
+					<div class="menu-toggle" id="menu-toggle" aria-label="Меню" role="button" tabindex="0"
+						aria-expanded="false" aria-controls="nav-dropdown">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+
+					<nav>
+						<ul>
+							<li><a href="#biography" data-target="biography">Биография</a></li>
+							<li><a href="#topworks" data-target="topworks">Популярные работы</a></li>
+							<li><a href="#gallery" data-target="gallery">Галерея работ</a></li>
+							<li><a href="#addresses" data-target="addresses">Адреса</a></li>
+							<li><a href="#comments" data-target="comments">Комментарии</a></li>
+							<li><a href="#footer" data-target="footer">Контакты</a></li>
+						</ul>
+					</nav>
+
+					<div id="nav-dropdown">
+						<button data-target="biography">Биография</button>
+						<button data-target="topworks">Популярные работы</button>
+						<button data-target="gallery">Галерея работ</button>
+						<button data-target="addresses">Адреса</button>
+						<button data-target="comments">Комментарии</button>
+						<button data-target="footer">Контакты</button>
+					</div>
+
+					<a href="profile.html" class="account-icon" title="Профиль"></a>
+				</header>
+
+				<section id="home"></section>
+				<section id="artists" class="artist-info">
+					<h1>Макс Эрнст</h1>
+					<div class="artist-dates">
+						<span>2 апреля 1891 — 1 апреля 1976</span>
+					</div>
+				</section>
+				<section class="artwork-section">
+					<div class="artwork-item">
+						<img src="Слон Целебес.jpg" alt="1" />
+						<p>TThe Elephant Celebes</p>
+					</div>
+					<div class="artwork-item">
+						<img src="Триумф сюрреализма.jpg" alt="2" />
+						<p>Triumph of Surrealism</p>
+					</div>
+					<div class="artwork-item">
+						<img src="Женщина, Старик и Цветок.jpg" alt="3" />
+						<p>Woman, Old Man and Flower</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<section id="biography">
+  <div class="bio-flex-container">
+		<h2>Биография</h2>
+    <div class="bio-left">
+      <div class="bio-photo">
+        <img src="Макс Эрнст 2.jpg" alt="Макс Эрнст" />
+      </div>
+      <div class="quote-box">
+        <i>"Макс Эрнст (и сюрреализм) имеет основания говорить, что „так же, как роль поэта, со времён знаменитого письма зрячего, состоит в том, чтобы писать под диктовку того, что в нём мыслится, артикулируется, — роль художника состоит в том, чтобы прочерчивать и проецировать вовне то, что в нём видится“."</i>
+        <p class="quote-author">- из книги Мориса Мерло-Понти, «Око и дух»</p>
+      </div>
+    </div>
+    <div class="bio-right">
+      <div class="period-buttons" id="period-buttons">
+        <button data-period="1">1 период</button>
+        <button data-period="2">2 период</button>
+        <button data-period="3">3 период</button>
+      </div>
+      
+      <div class="period-descriptions">
+        <div id="period1" class="period">
+          <h3>Период 1</h3>
+          <p>Макс Эрнст родился в Бруле, недалеко от Кёльна, в семье среднего достатка, и был третьим из девяти детей. Его отец Филипп был учителем для глухих и художником-любителем, что повлияло на интерес Макса к искусству и природе. В 1909 году он поступил в Боннский университет, где изучал философию, искусство и психологию, и начал рисовать в саду замка Брюль. В 1911 году он присоединился к группе «Рейнские экспрессионисты» и решил стать художником. В 1912 году он был впечатлен выставкой «Зондербунд» в Кёльне, где увидел работы Пикассо и постимпрессионистов. В 1914 году он познакомился с Гансом Арпом, и их дружба продлилась пятьдесят лет. Время войны резко изменило его жизнь, он служил на фронтах, и в автобиографии он писал о своем пережитом кризисе и потере «личности». Война разрушила его личность, но также дала возможность продолжать рисовать, когда его направили на фронт для составления карт.</p>
+        </div>
+        <div id="period2" class="period">
+          <h3>Период 2</h3>
+          <p>После демобилизации в 1918 году Эрнст вернулся в Кёльн и вскоре женился на Луизе Штраус, с которой познакомился еще в 1914 году. В 1919 году он посетил Пауля Клее в Мюнхене и вдохновился работами де Кирико, что подтолкнуло его к созданию первых коллажей и экспериментам с новыми техниками. В 1919–1920 годах он участвовал в дадаистском движении, основав группу в Кёльне и издавая журналы. В 1922 году он нелегально переехал во Францию, поселившись в Сен-Брисе, оставив жену и сына, и начал создавать фрески в Обебоне. В Париже Эрнст адаптировал теории Фрейда, что стало основой его художественного подхода, и выставлялся в Салоне независимых. В 1924 году он отправился в Юго-Восточную Азию по приглашению Элюара и других друзей, что расширило его горизонты. В это время он активно работал с различными техниками и контактировал с коллекционерами и меценатами, такими как Гуггенхайм.</p>
+        </div>
+        <div id="period3" class="period">
+          <h3>Период 3</h3>
+          <p>В 1939 году, с началом Второй мировой войны, Эрнст был интернирован во Франции как «нежелательный иностранный гражданин», но благодаря заступничеству друзей был вскоре освобожден. После оккупации Франции он был арестован гестапо, но с помощью Гуггенхайм и Фрая ему удалось бежать в США, оставив свою возлюбленную Леонору Кэррингтон. В Америке он женился на Гуггенхайм, и вместе с другими эмигрантами, включая Дюшана и Шагала, способствовал развитию абстрактного экспрессионизма. В 1946 году он развелся с Гуггенхайм и женился на Доротее Таннинг, после чего переехал в Аризону. В 1953 году он переехал во Францию, где продолжил работу и создал знаменитый шахматный набор «Бессмертие». В 1966 году он создал уникальный стеклянный шахматный набор, а в 1976 году скончался в Париже, оставив богатое художественное наследие.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+		<section id="topworks">
+			<h2>Популярные работы</h2>
+			<p>Познакомьтесь поближе с самыми известными работами и их смыслом, которые ассоциируются с Максом Эрнстом.</p>
+			<div class="topworks-gallery">
+				<div class="card"
+					data-description="Эрнст создаёт сюрреалистический пейзаж снов, в котором границы между сознательным и подсознательным размываются раз и навсегда. Центральная фигура слона, выполненная бессвязно и абстрактно, служит символом тайны и интриги. Вокруг животного сюрреалистические персонажи и предметы танцуют в фантастическом представлении. Композиция картины как бы предлагает зрителям расшифровать загадочное повествование, скрытое на холсте.">
+					<div class="card-image-container" style="position: relative;">
+						<img src="Слон Целебес.jpg" alt="Картина 1" />
+						<button class="desc-btn">Описание</button>
+						<div class="description-popup"></div>
+					</div>
+					<p>"Слон Целебес"</p>
+				</div>
+				<div class="card"
+					data-description="Картина является триумфальной кульминацией исследований сюрреализма, продолжавшихся всю сознательную жизнь Эрнста. Через завораживающее множество символических мотивов и сказочных образов Макс прославляет безграничную силу воображения, позволяющую преодолевать ограничения реальности. В данном ярком восхвалении сюрреализма Эрнст приглашает зрителей охватить причудливое, абсурдное и фантастическое, отправляясь в путешествие по калейдоскопическим пейзажам бессознательного.">
+					<div class="card-image-container" style="position: relative;">
+						<img src="Триумф сюрреализма.jpg" alt="Картина 2" />
+						<button class="desc-btn">Описание</button>
+						<div class="description-popup"></div>
+					</div>
+					<p>"Триумф сюрреализма"</p>
+				</div>
+				<div class="card"
+					data-description="Картина раскрывает увлечение Эрнста взаимодействием человеческих форм и природных элементов. Полотно разворачивается как сон: его фигуры трансформируются и сливаются воедино с окружающим пейзажем. Благодаря своему уникальному сочетанию символизма и абстракции Эрнст исследует темы трансформации и метаморфозы. Он предлагает зрителям созерцать изменчивость идентичности и вечный цикл жизни и смерти.">
+					<div class="card-image-container" style="position: relative;">
+						<img src="Женщина, Старик и Цветок.jpg" alt="Картина 3" />
+						<button class="desc-btn">Описание</button>
+						<div class="description-popup"></div>
+					</div>
+					<p>"Женщина, Старик и Цветок"</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery">
+			<h2>Галерея работ</h2>
+			<div class="carousel-container" style="margin-bottom:40px;">
+				<div class="carousel-track" id="carousel-track1">
+					<div class="gallery-item" data-year="1920"
+						data-description="Через загадочные образы шляп и фрагментированных лиц Эрнст приглашает зрителей к дезориентирующему, но увлекательному исследованию самого себя и абсурдности человеческого существования.">
+						<img src="Человека Делает Шляпа.jpg" alt="Картина 1" />
+						<div class="caption">"Человека Делает Шляпа"</div>
+					</div>
+					<div class="gallery-item" data-year="1923"
+						data-description="Сюрреалистическое видение горя и отчаяния с фрагментированными фигурами, сильно искажёнными от тоски. Используя символические образы и резкие контрасты, Эрнст вызывает в людях чувство глубокой экзистенциальной тревоги.">
+						<img src="Пьета или Ночная Революция.jpg" alt="Картина 2" />
+						<div class="caption">"Пьета или Ночная Революция"</div>
+					</div>
+					<div class="gallery-item" data-year="1923"
+						data-description="Своими смелыми и сатирическими образами Макс разоблачает абсурдность власти. Он предлагает зрителям противостоять репрессивным силам, формирующим человеческое общество.">
+						<img src="Император Убу.jpg" alt="Картина 3" />
+						<div class="caption">"Император Убу"</div>
+					</div>
+					<div class="gallery-item" data-year="1927"
+						data-description="Присутствие на картине голубя – символа мира и обновления – наполняет сцену чувством надежды и превосходства. Художник приглашает зрителей погрузиться в красоту и безмятежность мира природы.">
+						<img src="Лес и Голубь.jpg" alt="Картина 4" />
+						<div class="caption">"Лес и Голубь"</div>
+					</div>
+					<div class="gallery-item" data-year="1940"
+						data-description="На фоне кружащихся узоров и загадочных пейзажей появляется фигура невесты, окутанная слоями таинства и желания. Мастерски манипулируя формой и цветом, Эрнст зазывает зрителей в сюрреалистический мир, в котором переплетаются фантазия и реальность.">
+						<img src="Одеяние Невесты.jpg" alt="Картина 5" />
+						<div class="caption">"Одеяние Невесты"</div>
+					</div>
+					<div class="gallery-item" data-year="1940-1942"
+						data-description="Картина является ярким свидетельством разрушительных последствий Второй Мировой войны и хрупкости человеческой цивилизации. Макс призывает нас всех задуматься о хрупкости мира и устойчивости человеческого духа.">
+						<img src="Европа После Дождя 2.jpg" alt="Картина 6" />
+						<div class="caption">"Европа После Дождя II"</div>
+					</div>
+					<div class="gallery-item" data-year="1941"
+						data-description="Одинокая фигура некогда властного французского монарха Наполеона Бонапарта стоит на фоне бесплодного и пустынного ландшафта, его внушительное присутствие контрастирует с огромной пустотой дикой природы.">
+						<img src="Наполеон в Пустыне.jpg" alt="Картина 7" />
+						<div class="caption">"Наполеон в Пустыне"</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup-info" id="popup-info">
+				<div class="popup-content">
+					<button class="close-popup">×</button>
+					<h3 id="popup-title"></h3>
+					<p><strong>Год:</strong> <span id="popup-year"></span></p>
+					<p id="popup-desc"></p>
+				</div>
+			</div>
+
+	<div class="carousel-container2" style="margin-bottom:40px;">
+		<div class="carousel-track2" id="carousel-track2">
+			<div class="gallery-item2" data-year2="1924" 
+      data-description2="Заявленный в названии угрожающий соловей – всего лишь крошечная фигурка в небе. Почему и зачем это мирная певчая птичка может угрожать детям, в чем собственно эта угроза состоит и чем руководствовался автор, называя картину таким образом?">
+        <img src="Двое детей, испуганных соловьем.jpg" alt="Картина 1" />
+				<div class="caption2">"Двое детей, испуганных соловьем"</div>
+			</div>
+			<div class="gallery-item2" data-year2="1962" 
+      data-description2="В картине есть текст с такими географическими названиями, как «Луара» и «Индр», которые интегрированы в сюрреалистический пейзаж. Это сочетание человеческой формы и природы, наполненное символическим смыслом, отражает связь Эрнста с сюрреалистическим художественным движением.">
+				<img src="Французский сад.jpg" alt="Картина 2" />
+				<div class="caption2">"Французский сад"</div>
+			</div>
+      <div class="gallery-item2" data-year2="1942" 
+      data-description2="Картина имволически изображает взаимодействие между реальностью и подсознанием, подчеркивая важность воображения и сновидений в процессе творческого вдохновения.">
+        <img src="Сюрреализм и живопись.jpg" alt="Картина 3" />
+        <div class="caption2">"Сюрреализм и живопись"</div>
+      </div>
+      <div class="gallery-item2" data-year2="1942" 
+      data-description2="Картина  представляет собой аллегорическую композицию, в которой фигуры человека, лошади и женщины символически отражают внутренние конфликты, личные отношения и эмоциональные переживания автора, связанные с его связью с Леонорой Кэррингтон и пережитыми разрывами.">
+        <img src="Антипапа.jpg" alt="Картина 4" />
+        <div class="caption2">"Антипапа"</div>
+      </div>
+        <div class="gallery-item2" data-year2="1945" 
+        data-description2="Погружающийся во тьму, слабеющий разум Антония кричит о помощи, но его крик ужаса лишь отражается эхом от спокойной поверхности воды и заглушается смехом чудовищ, порожденных воображением святого">
+				<img src="Искушение святого Антония.jpg" alt="Картина 5" />
+				<div class="caption2">"Искушение святого Антония"</div>
+			</div>
+      <div class="gallery-item2" data-year2="1923" 
+      data-description2="На полотне изображена жертва моды эпохи машин, спускающаяся по подиуму, который на самом деле является бездной. Название предполагает боль и страдания женщины.">
+				<img src="Колеблющаяся женщина.jpg" alt="Картина 6" />
+				<div class="caption2">"Колеблющаяся женщина"</div>
+			</div>
+      <div class="gallery-item2" data-year2="1920" 
+      data-description2="Картина  использует сюрреалистические образы и абстрактные формы для исследования темы внутренней трансформации и культурных ассоциаций, погружая зрителя в атмосферу загадочности и мистики.">
+				<img src="Китайский соловей.jpg" alt="Картина 7" />
+				<div class="caption2">"Китайский соловей"</div>
+			</div>
+		</div>
+	</div>
+<div class="popup-info2" id="popup-info2">
+				<div class="popup-content2">
+					<button class="close-popup2">×</button>
+					<h3 id="popup-title2"></h3>
+					<p><strong>Год:</strong> <span id="popup-year2"></span></p>
+					<p id="popup-desc2"></p>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="addresses">
+			<h2>Адреса</h2>
+			<p>В данных галереях вы можете найти работы Макса Эрнста, выставленные на данный момент.</p>
+			<div class="map-container">
+				<div class="map-wrapper" id="map"></div>
+				<div class="buttons-wrapper">
+					<button class="address-btn" data-lat="50.82826" data-lon="6.88909">"Музей Макса Эрнста", Брюль, Германия</button>
+					<button class="address-btn" data-lat="40.7615" data-lon="-73.9777">"Музей современного искусства", Нью-Йорк, США</button>
+					<button class="address-btn" data-lat="34.06333" data-lon="-118.35806">"Музей искусств округа Лос-Анджелес", Лос-Анджелес, США</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="comments" class="comments-section">
+			<h2>Комментарии</h2>
+			<div id="comments-list" class="comments-list"></div>
+			<div class="comment-form">
+				<textarea id="newComment" placeholder="Ваш комментарий..." rows="3"></textarea>
+				<button id="submitComment">Отправить</button>
+			</div>
+		</section>
+
+		
+<footer class="footer">
+	<section id="footer" class="footer-section">
+		<h3>О нас</h3>
+		<p>Цель — продвигать исскуство и его различные направления. Это не только сборники информации, но и ее смысл.
+			Здесь больше, чем искусство.</p>
+	</div>
+	<div class="footer-section">
+		<h3>Контакты</h3>
+		<p>Телефон: +7 (901) 972-14-03</p>
+		<p>Email: lollamatyusheva@gmail.com</p>
+		<p>Адрес: г. Санкт-Петербург, пер. Джамбула, д. 13</p>
+	</div>
+	<div class="footer-section subscription">
+		<h3>Подписка на новости</h3>
+		<p>Введите почту, чтобы получать свежие новости и анонсы выставок.</p>
+		<input type="email" id="subscribeEmail" class="subscribe-input" placeholder="Ваш email" />
+		<button id="subscribeBtn" class="subscribe-btn">Подписаться</button>
+		<p id="subscribeMessage" class="subscribe-message">Вы успешно подписались на новости!</p>
+	</div>
+	<div class="footer-copy">
+		<p>© 2025 Сюрреалисты. Все права защищены.</p>
+	</div>
+</footer>
+
+
+
+
+
+
+
+		<script>
+			const backToHome = document.getElementById("back-to-home");
+			
+			window.onscroll = function() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+			backToHome.style.display = "block";
+			} else {
+			backToHome.style.display = "none";
+			}
+			};
+			
+			backToHome.onclick = function() {
+			window.scrollTo({
+			top: 0,
+			behavior: 'smooth' 
+			});
+			};
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navDropdown = document.getElementById('nav-dropdown');
+
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', String(!expanded));
+            navDropdown.classList.toggle('show');
+        });
+
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                menuToggle.click();
+            }
+        });
+
+        document.querySelectorAll('#nav-dropdown button, nav ul a').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target') || btn.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                if (navDropdown.classList.contains('show')) {
+                    navDropdown.classList.remove('show');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        const periodButtons = document.querySelectorAll('#period-buttons button');
+        const periods = document.querySelectorAll('.period');
+
+        function showPeriod(id) {
+            periods.forEach(p => p.classList.remove('active'));
+            const target = document.getElementById(id);
+            if (target) target.classList.add('active');
+        }
+        showPeriod('period1');
+
+        periodButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const periodId = 'period' + btn.getAttribute('data-period');
+                showPeriod(periodId);
+            });
+        });
+
+        function updatePeriodButtonsDisplay() {
+            document.getElementById('period-buttons').style.display = 'flex';
+        }
+        window.addEventListener('resize', updatePeriodButtonsDisplay);
+        updatePeriodButtonsDisplay();
+
+document.querySelectorAll('.card').forEach(card => {
+  const btn = card.querySelector('.desc-btn');
+  const popup = card.querySelector('.description-popup');
+
+  const customText = card.getAttribute('data-description');
+  popup.innerHTML = `<p>${customText}</p>`;
+
+  function updateDisplay() {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      popup.style.display = 'none';
+
+      if (btn) {
+        btn.style.display = 'inline-block';
+
+        if (!btn.dataset.bound) {
+          btn.addEventListener('click', () => {
+            if (popup.style.display === 'none' || popup.style.display === '') {
+              popup.style.display = 'flex';
+              btn.innerText = 'Скрыть описание';
+            } else {
+              popup.style.display = 'none';
+              btn.innerText = 'Показать описание';
+            }
+          });
+          btn.dataset.bound = 'true'; 
+        }
+      }
+    } else {
+      popup.style.display = 'flex';
+
+      // скрываем кнопку
+      if (btn) {
+        btn.style.display = 'none';
+        btn.innerText = 'Показать описание';
+      }
+    }
+  }
+
+  window.addEventListener('load', updateDisplay);
+  window.addEventListener('resize', updateDisplay);
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.card-image-container') && !e.target.closest('.desc-btn')) {
+      if (window.innerWidth <= 768) {
+        if (popup.style.display === 'flex') {
+          popup.style.display = 'none';
+          if (btn) btn.innerText = 'Показать описание';
+        }
+      }
+    }
+  });
+});
+
+      const track = document.querySelector('.carousel-track');
+      const items = document.querySelectorAll('.gallery-item');
+      const popup = document.getElementById('popup-info');
+      const popupTitle = document.getElementById('popup-title');
+      const popupYear = document.getElementById('popup-year');
+      const popupDesc = document.getElementById('popup-desc');
+
+      let isPaused = false;
+      let currentTranslateX = 0;
+      let direction1 = -1; 
+
+      function autoScroll() {
+          if (isPaused) return;
+
+          const firstItem = items[0];
+          const itemWidth = firstItem.offsetWidth + 15;
+
+          currentTranslateX += direction1 * itemWidth;
+
+          const maxTranslate = track.scrollWidth - track.parentElement.offsetWidth;
+
+          if (currentTranslateX >= maxTranslate) {
+              currentTranslateX = maxTranslate;
+              direction1 = -1; 
+          } else if (currentTranslateX <= 0) {
+              currentTranslateX = 0;
+              direction1 = 1; 
+          }
+
+          track.style.transform = `translateX(-${currentTranslateX}px)`;
+      }
+
+      let intervalId1 = setInterval(autoScroll, 2000);
+
+      track.addEventListener('mouseenter', () => { isPaused = true; });
+      track.addEventListener('mouseleave', () => { isPaused = false; });
+
+      items.forEach(item => {
+          item.addEventListener('click', () => {
+              const title = item.querySelector('.caption').innerText;
+              const year = item.getAttribute('data-year');
+              const desc = item.getAttribute('data-description');
+
+              popupTitle.innerText = title;
+              popupYear.innerText = year;
+              popupDesc.innerText = desc;
+              popup.classList.add('show');
+          });
+      });
+
+      document.querySelector('.close-popup').addEventListener('click', () => {
+          popup.classList.remove('show');
+      });
+
+      const track2 = document.querySelector('.carousel-track2');
+      const items2 = document.querySelectorAll('.gallery-item2');
+      const popup2 = document.getElementById('popup-info2');
+      const popupTitle2 = document.getElementById('popup-title2');
+      const popupYear2 = document.getElementById('popup-year2');
+      const popupDesc2 = document.getElementById('popup-desc2');
+
+      let isPaused2 = false;
+      let totalWidth2 = track2.scrollWidth;
+      let containerWidth2 = track2.parentElement.offsetWidth;
+      let currentTranslateX2 = totalWidth2 - containerWidth2;
+      let direction2 = 1; 
+
+      function updateDimensions() {
+          totalWidth2 = track2.scrollWidth;
+          containerWidth2 = track2.parentElement.offsetWidth;
+      }
+      window.addEventListener('resize', updateDimensions);
+
+      function autoScroll2() {
+          if (isPaused2) return;
+
+          const firstItem = items2[0];
+          const itemWidth = firstItem.offsetWidth + 15;
+
+          currentTranslateX2 += direction2 * itemWidth;
+
+          if (currentTranslateX2 >= totalWidth2 - containerWidth2) {
+              currentTranslateX2 = totalWidth2 - containerWidth2;
+              direction2 = -1;
+          } else if (currentTranslateX2 <= 0) {
+              currentTranslateX2 = 0;
+              direction2 = 1;
+          }
+
+          track2.style.transform = `translateX(-${currentTranslateX2}px)`;
+      }
+
+      let intervalId2 = setInterval(autoScroll2, 2000);
+
+      track2.addEventListener('mouseenter', () => { isPaused2 = true; });
+      track2.addEventListener('mouseleave', () => { isPaused2 = false; });
+
+      items2.forEach(item => {
+          item.addEventListener('click', () => {
+            const title = item.querySelector('.caption2').innerText;
+            const year = item.getAttribute('data-year2');
+            const desc = item.getAttribute('data-description2');
+
+            document.getElementById('popup-title2').innerText = title;
+            document.getElementById('popup-year2').innerText = year;
+            document.getElementById('popup-desc2').innerText = desc;
+            
+            popup2.classList.add('show');
+          });
+        });
+
+        const closeBtn2 = document.querySelector('.close-popup2');
+        if (closeBtn2) {
+          closeBtn2.addEventListener('click', () => {
+            popup2.classList.remove('show');
+          });
+        }
+
+		</script>
+
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=301c8492-009d-4551-b7e6-ac10481a3e36"
+			type="text/javascript"></script>
+		<script>
+			let myMap, placemark;
+		
+		  function initMap() {
+		    ymaps.ready(() => {
+		      myMap = new ymaps.Map("map", {
+		        center: [50.8333, 6.9167], 
+		        zoom: 10,
+		        controls: ['zoomControl']
+		      });
+		
+		      myMap.events.add('click', function (e) {
+		        const coords = e.get('coords');
+		        if (placemark) {
+		          placemark.geometry.setCoordinates(coords);
+		        } else {
+		          placemark = new ymaps.Placemark(coords, {}, {
+		            draggable: true
+		          });
+		          myMap.geoObjects.add(placemark);
+		          
+		          placemark.events.add('dragend', () => {
+		            const newCoords = placemark.geometry.getCoordinates();
+		            console.log('Новое местоположение:', newCoords);
+		          });
+		        }
+		      });
+		      
+		      document.querySelectorAll('.address-btn').forEach(btn => {
+		        btn.addEventListener('click', () => {
+		          const lat = parseFloat(btn.getAttribute('data-lat'));
+		          const lon = parseFloat(btn.getAttribute('data-lon'));
+		          myMap.setCenter([lat, lon], 14);
+		          if (placemark) {
+		            placemark.geometry.setCoordinates([lat, lon]);
+		          } else {
+		            placemark = new ymaps.Placemark([lat, lon], {}, {
+		              draggable: true
+		            });
+		            myMap.geoObjects.add(placemark);
+		            placemark.events.add('dragend', () => {
+		              const newCoords = placemark.geometry.getCoordinates();
+		              console.log('Новое местоположение:', newCoords);
+		            });
+		          }
+		        });
+		      });
+		    });
+		  }
+		
+		  window.addEventListener('load', initMap);
+		</script>
+
+		<script>
+			const commentsList = document.getElementById('comments-list');
+		  const textarea = document.getElementById('newComment');
+		  const btnSend = document.getElementById('submitComment');
+		const localStorageAvatarKey = 'profileAvatar'; // ключ для хранения
+
+		  const currentUser = {
+ 			 name: 'ВЫ',
+  			avatar: localStorage.getItem('profileAvatar') || ''
+			};
+		
+		  const predefinedComments = [
+    { author: 'Анастасия', avatar: 'профиль10.jpg', text: 'Обожаю его фантазии и загадочные миры, созданные вручную!' },
+    { author: 'Владимир', avatar: 'профиль2.jpg', text: 'Мне его работы кажутся слишком запутанными и непонятными... 🙄' },
+    { author: 'Евгений', avatar: 'профиль4.jpg', text: 'Стиль Макса Эрнста — это настоящий калейдоскоп идей и символов.' },
+    { author: 'Светлана', avatar: 'профиль1.jpg', text: 'Недавно читала о его вдохновении древними мифами. Интересно, как он оживляет эти легенды в своих работах.' },
+    { author: 'Джун', avatar: 'профиль7.jpg', text: 'Очень впечатляет, как он сочетает разные эпохи и культуры в одном произведении.' },
+    { author: 'Ольга', avatar: 'профиль8.jpg', text: 'Я видела его выставку — невероятное ощущение, будто попадаешь в другой мир! ✨ Кто-нибудь уже был там?' },
+    { author: 'Дмитрий', avatar: 'профиль9.jpg', text: 'Пикассо лучше, имхо :/' },
+    { author: 'Фейт', avatar: 'профиль6.jpg', text: 'Его работы словно складываются из множества эпох и культур, создавая уникальный калейдоскоп символов и образов, которые требуют от зрителя не только внимательности, но и способности интерпретировать скрытые смыслы. Не знаю как вам, а мне особенно интересно, как он сочетает древние мифы с современными техниками, создавая ощущение, что каждая картина — это окно в иной мир, наполненный загадками и тайнами. В его произведениях чувствуется уважение к истории и одновременно желание переосмыслить ее через призму современности. Это искусство, которое стимулирует размышления и побуждает к диалогу между прошлым и настоящим, вызывая ощущение времени и пространства, переплетенных в единую ткань.' },
+    { author: 'Алексей', avatar: 'профиль5.jpg', text: 'Вдохновляюще.' },
+    { author: 'Елена', avatar: 'профиль3.jpg', text: 'Настоятельно рекомендую ознакомиться с его творчеством всем любителям сюрреализма!' }
+];
+		
+			let allCommentsData = [];
+		
+		  function createComment({author, avatar, text, replyTo = null}) {
+		    const commentDiv = document.createElement('div');
+		    commentDiv.className = 'comment';
+		
+		    const headerDiv = document.createElement('div');
+		    headerDiv.className = 'comment-header';
+		
+		    const avatarImg = document.createElement('img');
+		    avatarImg.src = avatar;
+		    avatarImg.className = 'comment-avatar';
+		
+		    const infoDiv = document.createElement('div');
+		    infoDiv.className = 'comment-info';
+		
+		    const authorSpan = document.createElement('span');
+		    authorSpan.className = 'comment-author';
+		    authorSpan.innerText = author;
+		    infoDiv.appendChild(authorSpan);
+		
+		    if (replyTo) {
+		      const replyToSpan = document.createElement('div');
+		      replyToSpan.className = 'comment-reply-to';
+		      replyToSpan.innerText = `(@${replyTo.author})`;
+		      infoDiv.appendChild(replyToSpan);
+		    }
+		
+		    const actionsDiv = document.createElement('div');
+		    actionsDiv.className = 'comment-actions';
+		
+		    const likeBtn = document.createElement('button');
+		    likeBtn.innerHTML = `👍 <span class="like-count">0</span>`;
+		    likeBtn.dataset.liked = 'false';
+		    likeBtn.onclick = () => {
+		      const liked = likeBtn.dataset.liked === 'true';
+		      const dislikeBtn = likeBtn.nextElementSibling;
+		      if (!liked) {
+		        likeBtn.dataset.liked = 'true';
+		        likeBtn.querySelector('.like-count').innerText = '1';
+		        if (dislikeBtn.dataset.liked === 'true') {
+		          dislikeBtn.dataset.liked = 'false';
+		          dislikeBtn.querySelector('.dislike-count').innerText = '0';
+		        }
+		      } else {
+		        likeBtn.dataset.liked = 'false';
+		        likeBtn.querySelector('.like-count').innerText = '0';
+		      }
+		    };
+		
+		    const dislikeBtn = document.createElement('button');
+		    dislikeBtn.innerHTML = `👎 <span class="dislike-count">0</span>`;
+		    dislikeBtn.dataset.liked = 'false';
+		    dislikeBtn.onclick = () => {
+		      const disliked = dislikeBtn.dataset.liked === 'true';
+		      const likeBtnRef = dislikeBtn.previousElementSibling; // лайк — предыдущий
+		      if (!disliked) {
+		        dislikeBtn.dataset.liked = 'true';
+		        dislikeBtn.querySelector('.dislike-count').innerText = '1';
+		        if (likeBtnRef.dataset.liked === 'true') {
+		          likeBtnRef.dataset.liked = 'false';
+		          likeBtnRef.querySelector('.like-count').innerText = '0';
+		        }
+		      } else {
+		        dislikeBtn.dataset.liked = 'false';
+		        dislikeBtn.querySelector('.dislike-count').innerText = '0';
+		      }
+		    };
+		
+		    const replyBtn = document.createElement('button');
+        replyBtn.innerText = 'Ответить';
+
+        replyBtn.onclick = () => {
+            // Проверяем есть ли уже окно ответа
+            const existingReplyBox = commentDiv.querySelector('.reply-box');
+            if (existingReplyBox) {
+                existingReplyBox.remove();
+            } else {
+                const replyBox = document.createElement('div');
+                replyBox.className = 'reply-box';
+
+                const replyTextarea = document.createElement('textarea');
+                replyTextarea.rows = 2;
+                replyTextarea.placeholder = 'Ваш ответ...';
+
+                const replySend = document.createElement('button');
+                replySend.innerText = 'Отправить';
+
+                replySend.onclick = () => {
+                    if (replyTextarea.value.trim() !== '') {
+                        createComment({
+author: currentUser.name,
+                            avatar: currentUser.avatar,
+                            text: replyTextarea.value,
+                            replyTo: {author: author}
+                        });
+                        replyBox.remove();
+                    }
+                };
+
+                replyBox.appendChild(replyTextarea);
+                replyBox.appendChild(replySend);
+                commentDiv.appendChild(replyBox);
+            }
+        };
+		
+					const deleteBtn = document.createElement('button');
+					deleteBtn.innerText = 'Удалить';
+					deleteBtn.onclick = () => {
+					if (confirm('Удалить этот комментарий?')) {
+					const commentId = commentDiv.getAttribute('data-id');
+					if (commentId) {
+					allCommentsData = allCommentsData.filter(c => c.id !== commentId);
+					}
+					commentDiv.remove();
+					}
+					};
+		
+		    actionsDiv.appendChild(likeBtn);
+		    actionsDiv.appendChild(dislikeBtn);
+		    actionsDiv.appendChild(replyBtn);
+		    if (author === currentUser.name) {
+		      actionsDiv.appendChild(deleteBtn);
+		    }
+		
+		    headerDiv.appendChild(avatarImg);
+		    headerDiv.appendChild(infoDiv);
+		    headerDiv.appendChild(actionsDiv);
+		
+		    const textDiv = document.createElement('div');
+		    textDiv.className = 'comment-text';
+		    textDiv.innerText = text;
+		
+		    commentDiv.appendChild(headerDiv);
+		    commentDiv.appendChild(textDiv);
+		
+		    commentsList.appendChild(commentDiv);
+		
+		    allCommentsData.push({author, avatar, text});
+		  }
+		
+		  document.getElementById('submitComment').onclick = () => {
+		    const text = textarea.value.trim();
+		    if (text !== '') {
+		      createComment({
+		        author: currentUser.name,
+		        avatar: currentUser.avatar,
+		        text: text
+		      });
+		      textarea.value = '';
+		
+		      setTimeout(() => {
+		        for (let i=0; i<2; i++) {
+		          const randIndex = Math.floor(Math.random() * predefinedComments.length);
+		          createComment(predefinedComments[randIndex]);
+		        }
+		      }, 5000);
+		    }
+		  };
+		
+		  function addAutoComments() {
+		    for (let i=0; i<2; i++) {
+		      const randIndex = Math.floor(Math.random() * predefinedComments.length);
+		      setTimeout(() => {
+		        createComment(predefinedComments[randIndex]);
+		      }, Math.random() * 2000 + 3000);
+		    }
+		  }
+		  addAutoComments();
+
+			document.getElementById('subscribeBtn').onclick = () => {
+			const emailInput = document.getElementById('subscribeEmail');
+			const messageP = document.getElementById('subscribeMessage');
+			const email = emailInput.value.trim();
+			
+			const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			
+			if (email === '') {
+			alert('Пожалуйста, введите ваш email!');
+			} else if (!emailPattern.test(email)) {
+			alert('Пожалуйста, введите корректный email!');
+			} else {
+			messageP.style.display = 'block';
+			
+			emailInput.value = '';
+			}
+			};
+
+		</script>
+
+</body>
+</html>
