@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Профиль</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: gilroy;
+      background: linear-gradient(135deg, #000, #555);
+      color: #ccc;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #555;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #ccc;
+      transition: background 0.3s, transform 0.2s;
+      z-index: 10;
+    }
+
+    .back-button:hover {
+      background: #777;
+      transform: scale(1.05);
+    }
+
+    .profile-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 3px solid #999;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      color: #ccc;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .avatar.empty::before {
+      content: "";
+      font-size: 80px;
+      color: #ccc;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+
+    #avatar-input {
+      display: none;
+    }
+
+    .info-box {
+      background: #333333;
+      padding: 20px;
+      border-radius: 12px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+    }
+
+    .info-box h2 {
+      margin-top: 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .field-group {
+      margin-bottom: 15px;
+    }
+
+    .field-label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .field-value {
+      padding: 8px 12px;
+      background-color: #444;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .edit-input {
+      width: 100%;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #000;
+      font-size: 14px;
+      outline: none;
+      transition: background 0.3s;
+    }
+
+    .edit-input:focus {
+      background-color: #eee;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #555;
+      color: #ccc;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #777;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Измененная кнопка для возврата, вызывающая функцию -->
+  <button class="back-button" onclick="goBackAndReload()">Назад</button>
+  
+  <div class="profile-container">
+    <div class="avatar-wrapper">
+      <div class="avatar empty" id="avatar" title="Нажмите, чтобы изменить"></div>
+      <input type="file" accept="image/*" id="avatar-input" />
+    </div>
+    <div class="info-box" id="profileInfo">
+      <h2>Мой профиль</h2>
+      <div class="field-group">
+        <div class="field-label">Имя:</div>
+        <div class="field-value" id="nameDisplay">Иван Иванов</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">Телефон:</div>
+        <div class="field-value" id="phoneDisplay">+7 (999) 123-45-67</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">Почта:</div>
+        <div class="field-value" id="emailDisplay">ivan@example.com</div>
+      </div>
+    </div>
+    <div class="info-box" id="editForm" style="display:none;">
+      <h2>Редактировать профиль</h2>
+      <div class="field-group">
+        <label class="field-label" for="nameInput">Имя:</label>
+        <input type="text" id="nameInput" class="edit-input" required pattern="^[А-Яа-яЁёA-Za-z\s-]{2,}$" placeholder="Введите имя"/>
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="phoneInput">Телефон:</label>
+        <input type="tel" id="phoneInput" class="edit-input" required pattern="^\+?\d{1,3}?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{2}[\s.-]?\d{2}$" placeholder="+7 (999) 123-45-67"/>
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="emailInput">Почта:</label>
+        <input type="email" id="emailInput" class="edit-input" required placeholder="ivan@example.com"/>
+      </div>
+      <div class="buttons">
+        <button id="saveBtn">Сохранить</button>
+        <button id="clearBtn">Очистить</button>
+      </div>
+    </div>
+    <div class="buttons" style="margin-top:30px;">
+      <button id="editBtn">Редактировать</button>
+    </div>
+  </div>
+  
+  <script>
+    const defaultProfile = {
+      name: 'Иван Иванов',
+      phone: '+7 (999) 123-45-67',
+      email: 'ivan@example.com'
+    };
+
+    const avatar = document.getElementById('avatar');
+    const avatarInput = document.getElementById('avatar-input');
+
+    const nameDisplay = document.getElementById('nameDisplay');
+    const phoneDisplay = document.getElementById('phoneDisplay');
+    const emailDisplay = document.getElementById('emailDisplay');
+
+    const nameInput = document.getElementById('nameInput');
+    const phoneInput = document.getElementById('phoneInput');
+    const emailInput = document.getElementById('emailInput');
+
+    const profileDisplay = document.getElementById('profileInfo');
+    const editForm = document.getElementById('editForm');
+
+    const editBtn = document.getElementById('editBtn');
+    const saveBtn = document.getElementById('saveBtn');
+    const clearBtn = document.getElementById('clearBtn');
+
+    // Функция для обновления аватара
+    function updateAvatar() {
+      const storedAvatar = localStorage.getItem('profileAvatar');
+      if (storedAvatar) {
+        avatar.style.backgroundImage = `url(${storedAvatar})`;
+        avatar.classList.remove('empty');
+      } else {
+        avatar.style.backgroundImage = '';
+        avatar.classList.add('empty');
+      }
+    }
+
+    // Загрузка профиля из localStorage или дефолтных данных
+    function loadProfile() {
+      nameDisplay.textContent = localStorage.getItem('profileName') || defaultProfile.name;
+      phoneDisplay.textContent = localStorage.getItem('profilePhone') || defaultProfile.phone;
+      emailDisplay.textContent = localStorage.getItem('profileEmail') || defaultProfile.email;
+      updateAvatar();
+    }
+
+    // Сохранение профиля в localStorage
+    function saveProfile() {
+      localStorage.setItem('profileName', nameDisplay.textContent);
+      localStorage.setItem('profilePhone', phoneDisplay.textContent);
+      localStorage.setItem('profileEmail', emailDisplay.textContent);
+    }
+
+    loadProfile();
+
+    // Обработчик клика по аватару для выбора изображения
+    avatar.addEventListener('click', () => {
+      document.getElementById('avatar-input').click();
+    });
+
+    // Обработка изменения файла аватара
+    avatarInput.addEventListener('change', () => {
+      const file = avatarInput.files[0];
+      if (file) {
+        if (file.size > 2 * 1024 * 1024) {
+          alert('Максимальный размер файла 2 МБ');
+          avatarInput.value = '';
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = () => {
+          const dataUrl = reader.result;
+          avatar.style.backgroundImage = `url(${dataUrl})`;
+          avatar.classList.remove('empty');
+          localStorage.setItem('profileAvatar', dataUrl);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        localStorage.removeItem('profileAvatar');
+        updateAvatar();
+      }
+    });
+
+    // Переход в режим редактирования
+    document.getElementById('editBtn').onclick = () => {
+      nameInput.value = nameDisplay.textContent;
+      phoneInput.value = phoneDisplay.textContent;
+      emailInput.value = emailDisplay.textContent;
+      profileDisplay.style.display = 'none';
+      editForm.style.display = 'block';
+    };
+
+    // Сохранение изменений
+    document.getElementById('saveBtn').onclick = () => {
+      if (
+        !nameInput.checkValidity() ||
+        !phoneInput.checkValidity() ||
+        !emailInput.checkValidity()
+      ) {
+        alert('Пожалуйста, введите правильные данные');
+        return;
+      }
+      nameDisplay.textContent = nameInput.value.trim() || 'Нет данных';
+      phoneDisplay.textContent = phoneInput.value.trim() || 'Нет данных';
+      emailDisplay.textContent = emailInput.value.trim() || 'Нет данных';
+
+      saveProfile();
+
+      profileDisplay.style.display = 'block';
+      editForm.style.display = 'none';
+    };
+
+    // Очистка полей и профиля
+    document.getElementById('clearBtn').onclick = () => {
+      nameInput.value = '';
+      phoneInput.value = '';
+      emailInput.value = '';
+      localStorage.removeItem('profileAvatar');
+      updateAvatar(); // Обновляем аватар после очистки
+      nameDisplay.textContent = 'Нет данных';
+      phoneDisplay.textContent = 'Нет данных';
+      emailDisplay.textContent = 'Нет данных';
+
+      saveProfile();
+    };
+
+    // Функция для возврата и перезагрузки предыдущей страницы
+    function goBackAndReload() {
+      // Проверка наличия реферера
+      if (document.referrer) {
+        // Переход на предыдущую страницу и перезагрузка
+        window.location.href = document.referrer;
+      } else {
+        // Если реферер отсутствует, просто используем history.back()
+        history.back();
+      }
+    }
+
+    // Обработка события на кнопке "Назад"
+    // Вызов функции goBackAndReload
+  </script>
+
+  <script>
+    // Назначение обработчика кнопки "Назад"
+    document.querySelector('.back-button').onclick = goBackAndReload;
+
+    // Инициализация аватара при загрузке
+    window.onload = () => {
+      updateAvatar();
+    };
+  </script>
+</body>
+
+</html>
