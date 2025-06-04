@@ -20,6 +20,7 @@
 		}
 
 		h1 {
+			font-family: 'Gilroy';
 			font-size: 3.5em;
 			font-weight: bold; /* ExtraBold */
 			margin-bottom: 20px;
@@ -27,6 +28,7 @@
 		}
 
 		h2 {
+			font-family: 'Gilroy';
 			font-size: 2em;
 			font-weight: bold; /* ExtraBold */
 			margin-bottom: 15px;
@@ -34,6 +36,7 @@
 		}
 
 		h3 {
+			font-family: 'Gilroy';
 			font-size: 1em;
 			font-weight: bold; /* ExtraBold */
 			margin-bottom: 15px;
@@ -41,6 +44,7 @@
 		}
 
 		p {
+			font-family: 'Gilroy';
 			font-size: 1em;
 			font-weight: 300; /* Light */
 			margin-bottom: 15px;
@@ -48,6 +52,7 @@
 		}
 
 		p1 {
+			font-family: 'Gilroy';
 			font-size: 0.6em;
 			font-weight: 300; /* Light */
 			margin-bottom: 15px;
