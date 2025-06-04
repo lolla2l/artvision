@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="page1styles.css">
+	<title> Художники сюрреалисты</title>
+</head>
+
+<body>
+	<button id="back-to-home" aria-label="Вернуться на главную" style="display:none;">↑</button>
+	</button>
+	<div class="container">
+		<div class="left-sidebar">
+			<div class="logo">
+				<img src="лого.png" alt="Art Logo" style="width:172px; height:34px;" />
+            </div>
+				<ul class="profile-list">
+					<li>
+						<button onclick="window.location.href='page1.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка1.jpg" alt="Рене Магритт" title="Рене Магритт" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page2.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка2.jpeg" alt="Макс Эрнест" title="Макс Эрнест" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page3.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка3.jpg" alt="Artist 3" title="Artist 3" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page4.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка4.jpg" alt="Artist 4" title="Artist 4" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page5.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка5.jpg" alt="Artist 5" title="Artist 5" />
+                    </button>
+					</li>
+					<li>
+						<button onclick="window.location.href='page6.html'" style="background:none; border:none; cursor:pointer;">
+                        <img src="иконка6.jpg" alt="Artist 6" title="Artist 6" />
+                    </button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="main-content">
+				<header>
+					<div class="menu-toggle" id="menu-toggle" aria-label="Меню" role="button" tabindex="0"
+						aria-expanded="false" aria-controls="nav-dropdown">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+
+					<nav>
+						<ul>
+							<li><a href="#biography" data-target="biography">Биография</a></li>
+							<li><a href="#topworks" data-target="topworks">Популярные работы</a></li>
+							<li><a href="#gallery" data-target="gallery">Галерея работ</a></li>
+							<li><a href="#addresses" data-target="addresses">Адреса</a></li>
+							<li><a href="#comments" data-target="comments">Комментарии</a></li>
+							<li><a href="#footer" data-target="footer">Контакты</a></li>
+						</ul>
+					</nav>
+
+					<div id="nav-dropdown">
+						<button data-target="biography">Биография</button>
+						<button data-target="topworks">Популярные работы</button>
+						<button data-target="gallery">Галерея работ</button>
+						<button data-target="addresses">Адреса</button>
+						<button data-target="comments">Комментарии</button>
+						<button data-target="footer">Контакты</button>
+					</div>
+
+					<a href="profile.html" class="account-icon" title="Профиль"></a>
+				</header>
+
+				<section id="home"></section>
+				<section id="artists" class="artist-info">
+					<h1>Рене Магритт</h1>
+					<div class="artist-dates">
+						<span>21 ноября 1898 – 15 августа 1967</span>
+					</div>
+				</section>
+				<section class="artwork-section">
+					<div class="artwork-item">
+						<img src="Влюбленные.jpg" alt="1" />
+						<p>The lovers</p>
+					</div>
+					<div class="artwork-item">
+						<img src="Сын человеческий.jpg" alt="2" />
+						<p>The Son of Man</p>
+					</div>
+					<div class="artwork-item">
+						<img src="Вероломство образов.jpg" alt="3" />
+						<p>The Treason of Pictures</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<section id="biography">
+  <div class="bio-flex-container">
+		<h2>Биография</h2>
+    <div class="bio-left">
+      <div class="bio-photo">
+        <img src="Рене Магритт.jpg" alt="Рене Магритт" />
+      </div>
+      <div class="quote-box">
+        <i>"Рене Магритт, в отличие от большинства сюрреалистов, хотел казаться добропорядочным бюргером и очень любил заниматься мстификациями — например, изготавливать фальшивые купюры и картины. Так что его работа «Это не трубка» может быть не только проявлением простой языковой игры, но и иметь куда более интригующие подтексты. А что еще мы можем узнать, взглянувшись в образный мир художника?"</i>
+        <p class="quote-author">- Анастасия Фролкова</p>
+      </div>
+    </div>
+    <div class="bio-right">
+      <div class="period-buttons" id="period-buttons">
+        <button data-period="1">1 период</button>
+        <button data-period="2">2 период</button>
+        <button data-period="3">3 период</button>
+      </div>
+      
+      <div class="period-descriptions">
+        <div id="period1" class="period">
+          <h3>Период 1</h3>
+          <p>Рене Магритт родился в ноябре 1898 года в Лессине, Бельгия, в семье торговца тканями Леопольда Магритта и модистки Реджины Бертиншам. Уже в 11 лет он начал брать уроки рисования, а в 12 потерял мать, которая покончила жизнь самоубийством, бросившись в реку Самбр; лицо женщины часто появляется в его работах. В 1916 году он поступил в Королевскую Академию изящных искусств в Брюсселе, где изучал живопись, экспериментируя с импрессионизмом, кубизмом и футуризмом. Его учителями были Констан Монтальд и Гисберто Комбаза, который больше нравился молодому художнику. В 1920 году он был призван на военную службу и провел около девяти месяцев в пехотном полку в Беверло. После армии он работал на обойной фабрике, создавал рекламные плакаты и вывески, но в 1926 году заключил контракт с галереей и полностью посвятил себя живописи. В этом же году его первая сюрреалистическая картина — «Потерянный жокей» — привлекла внимание публики, однако первая выставка в Брюсселе прошла с критикой, и он решил переехать в Париж.</p>
+        </div>
+        <div id="period2" class="period">
+          <h3>Период 2</h3>
+          <p>В 1927 году Магритт устроил свою первую персональную выставку в Брюсселе, которая прошла под критикой, и разочарованный художник переехал в Париж, где присоединился к группе сюрреалистов во главе с Андре Бретоном. В 1929 году его работы были представлены на выставке в галерее Goemans вместе с Пикассо, Дали и другими великими художниками, однако он так и не смог обрести значительного влияния в Париже и вскоре вернулся в Брюссель. Там он продолжил работать в сфере рекламы вместе с братом, создав собственное агентство. В середине 1930-х годов он под псевдонимом «Эймар» рисовал постеры к фильмам, а его живопись продолжала развиваться, привлекая внимание за границей. В 1936 году его работы были выставлены в США, а в 1938 году — в Лондоне. В это время стиль Магритта начал претерпевать изменения: во время оккупации Бельгии во Второй мировой войне он стал добавлять яркие, красочные элементы в свои картины, что было протестом против жестокости и оккупации.</p>
+        </div>
+        <div id="period3" class="period">
+          <h3>Период 3</h3>
+          <p>После окончания Второй мировой войны Магритт столкнулся с трудностями: заказов на рекламу было мало, и он даже занимался подделкой картин других художников и фальшивомонетничеством, что помогало ему выживать. В 1946 году он публично отказался от пессимистических мотивов своего раннего творчества и подписал манифест сюрреализма с другими художниками. В 1950-х годах его интерес к искусству и символизму снова вырос, а его работы начали покупать за границей, особенно в США и Великобритании. Магритт стал известен как мастер магического реализма, первым включив слова в свои произведения как неотъемлемую часть искусства. Он продолжал носить характерную шляпу-котелок и черное пальто, чтобы сохранить анонимность и подчеркнуть свою загадочную личность. В 1960-х годах он создал знаменитый шахматный набор «Бессмертие» и экспериментировал с новыми материалами, например, стеклом. В 1968 году он завершил работу над своим самым известным проектом — стеклянным шахматным набором, а в 1976 году умер в Брюсселе, оставив после себя богатое наследие сюрреалистического искусства.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+		<section id="topworks">
+			<h2>Популярные работы</h2>
+			<p>Познакомьтесь поближе с самыми известными работами и их смыслом, которые ассоциируются с Рене Магриттом.</p>
+			<div class="topworks-gallery">
+				<div class="card"
+					data-description="Картина иллюстрирует концепцию «Любовь слепа», показывая, как герои, поглощенные страстью, не замечают окружающего мира и друг друга. В то же время, их любовь настолько сильна, что они способны преодолевать любые преграды и достигать настоящей близости, несмотря на тайны и разделяющие их покровы.">
+					<div class="card-image-container" style="position: relative;">
+						<img src="Влюбленные.jpg" alt="Картина 1" />
+						<button class="desc-btn">Описание</button>
+						<div class="description-popup"></div>
+					</div>
+					<p>"Влюбленные"</p>
+				</div>
+				<div class="card"
+					data-description="Картина представляет собой многослойное произведение, в котором герой, маскирующийся под добропорядочного гражданина, отражает криминальную составляющую и темные стороны человеческой натуры. Аллюзия на грехопадение через символ зеленого яблока подчеркивает искушения современности, в то время как воспоминания о матери художника, утонувшей в реке, добавляют глубину и личную трагедию в сюжет.">
+					<div class="card-image-container" style="position: relative;">
+						<img src="Сын человеческий.jpg" alt="Картина 2" />
+						<button class="desc-btn">Описание</button>
+						<div class="description-popup"></div>
+					</div>
+					<p>"Сын человеческий"</p>
+				</div>
+				<div class="card"
+					data-description="Картина демонстрирует разницу между образами и словами, подчеркивая, что они не заменяют друг друга. Несмотря на изображение трубки, надпись «Это не трубка» указывает на то, что зритель воспринимает лишь образ предмета, а не сам предмет. Таким образом, автор акцентирует внимание на иллюзии восприятия и относительности значений.">
+					<div class="card-image-container" style="position: relative;">
+						<img src="Вероломство образов.jpg" alt="Картина 3" />
+						<button class="desc-btn">Описание</button>
+						<div class="description-popup"></div>
+					</div>
+					<p>"Вероломство образов"</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery">
+			<h2>Галерея работ</h2>
+			<div class="carousel-container" style="margin-bottom:40px;">
+				<div class="carousel-track" id="carousel-track1">
+					<div class="gallery-item" data-year="1926"
+						data-description="Жокей скачет на лошади не то в снегу, не то в странном тумане, словно он попал внутрь собственной души и пытается от себя убежать.">
+						<img src="Потерянный жокей.jpg" alt="Картина 1" />
+						<div class="caption">"Потерянный жокей"</div>
+					</div>
+					<div class="gallery-item" data-year="1936"
+						data-description="Живописец смотрит на яйцо, а рисует птицу, что символизирует трансформацию жизненного зачатка и передачу сути самого существования.">
+						<img src="Проницательность.jpg" alt="Картина 2" />
+						<div class="caption">"Проницательность"</div>
+					</div>
+					<div class="gallery-item" data-year="1927"
+						data-description="Всё, что видимо, скрывает нечто другое, и всегда хочется это, нечто скрытое, рассмотреть и узнать».">
+						<img src="Открытие.jpg" alt="Картина 3" />
+						<div class="caption">"Открытие"</div>
+					</div>
+					<div class="gallery-item" data-year="1937"
+						data-description="Терапевт помогает своим клиентам покинуть пределы мрачного и одинокого места, которое находится внутри них">
+						<img src="Терапевт.jpg" alt="Картина 4" />
+						<div class="caption">"Терапевт"</div>
+					</div>
+					<div class="gallery-item" data-year="1937"
+						data-description="Отражение подчинено запрету на воспроизведение («воспроизведение запрещено») и в то же время невозможно в рамках нашего мира («запрещённое воспроизведение»).">
+						<img src="Репродуцирование запрещено.jpg" alt="Картина 5" />
+						<div class="caption">"Репродуцирование запрещено"</div>
+					</div>
+					<div class="gallery-item" data-year="1937"
+						data-description="Органы чувств отражают лишь внешний облик вещей, не передавая скрытой глубины мира, его тайны. Только несоединимое помогает, по мнению Магритта, уловить смысл бытия.">
+						<img src="Фальшивое зеркало.jpg" alt="Картина 6" />
+						<div class="caption">"Фальшивое зеркало"</div>
+					</div>
+					<div class="gallery-item" data-year="1953"
+						data-description="Картина олицетворяет одноликость толпы и одиночество индивидуума, который может прикоснуться к настоящей жизни лишь во сне.">
+						<img src="Голконда.jpg" alt="Картина 7" />
+						<div class="caption">"Голконда"</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup-info" id="popup-info">
+				<div class="popup-content">
+					<button class="close-popup">×</button>
+					<h3 id="popup-title"></h3>
+					<p><strong>Год:</strong> <span id="popup-year"></span></p>
+					<p id="popup-desc"></p>
+				</div>
+			</div>
+
+	<div class="carousel-container2" style="margin-bottom:40px;">
+		<div class="carousel-track2" id="carousel-track2">
+			<div class="gallery-item2" data-year2="1964" 
+      data-description2="Фигура появляется и в то же время исчезает, раскрывается и скрывается на фоне совершенно необычного места, которое одновременно представляет собой и город, и лес, и передний план, и задний.">
+        <img src="Общее место.jpg" alt="Картина 1" />
+				<div class="caption2">"Общее место"</div>
+			</div>
+			<div class="gallery-item2" data-year2="1966" 
+      data-description2="Художник хочет показать, что всё, что сотворено в мире: земля, вода, небо, луна, звёзды, снег, дождь и так далее — есть внутри нас самих.">
+				<img src="Счастливый даритель.jpg" alt="Картина 2" />
+				<div class="caption2">"Счастливый даритель"</div>
+			</div>
+      <div class="gallery-item2" data-year2="1962" 
+      data-description2="Триумф гармонии, чувство абсолютного единения, целостность божественного замысла, процесс творения и непрестанного обновления, который мы наблюдаем лишь в природе.">
+        <img src="Триумфальная арка.jpg" alt="Картина 3" />
+        <div class="caption2">"Триумфальная арка"</div>
+      </div>
+      <div class="gallery-item2" data-year2="1935" 
+      data-description2="Мы сами для себя решаем, как выглядит то, что скрыто от нас, и это формирует наше восприятие мира.">
+        <img src="Условия человеческого существования.jpg" alt="Картина 4" />
+        <div class="caption2">"Условия человеческого существования"</div>
+      </div>
+        <div class="gallery-item2" data-year2="1964" 
+        data-description2="Обезличенности современного человека, превращения его в бездушный, заменяемый предмет, призванный не осуществлять индивидуальную волю, а просто выполнять бессмысленные действия.">
+				<img src="Человек в котелке.jpg" alt="Картина 5" />
+				<div class="caption2">"Человек в котелке"</div>
+			</div>
+      <div class="gallery-item2" data-year2="1963" 
+      data-description2="Каждый объект как будто играет с идеей восприятия. Изображение занавески часто используется как метафора для скрывания, но в «Трудном переходе» она оттянута назад, как будто чтобы что-то раскрыть.">
+				<img src="Трудный переход.jpg" alt="Картина 6" />
+				<div class="caption2">"Трудный переход"</div>
+			</div>
+      <div class="gallery-item2" data-year2="1964" 
+      data-description2="Внешний вид войны может быть красивым, сотканным из обещаний и ложных надежд, но лицо её скрывает совсем иное — насилие и разрушенные судьбы людей.">
+				<img src="Великая война.jpg" alt="Картина 7" />
+				<div class="caption2">"Великая война"</div>
+			</div>
+		</div>
+	</div>
+<div class="popup-info2" id="popup-info2">
+				<div class="popup-content2">
+					<button class="close-popup2">×</button>
+					<h3 id="popup-title2"></h3>
+					<p><strong>Год:</strong> <span id="popup-year2"></span></p>
+					<p id="popup-desc2"></p>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="addresses">
+			<h2>Адреса</h2>
+			<p>В данных галереях вы можете найти работы Рене Магритта, выставленные на данный момент.</p>
+			<div class="map-container">
+				<div class="map-wrapper" id="map"></div>
+				<div class="buttons-wrapper">
+					<button class="address-btn" data-lat="50.8424" data-lon="4.3588">"Музей Рене Магритта", Брюссель, Бельгия</button>
+					<button class="address-btn" data-lat="40.7615" data-lon="-73.9777">"Музей современного искусства", Нью-Йорк, США</button>
+					<button class="address-btn" data-lat="34.06333" data-lon="-118.35806">"Музей искусств округа Лос-Анджелес", Лос-Анджелес, США</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="comments" class="comments-section">
+			<h2>Комментарии</h2>
+			<div id="comments-list" class="comments-list"></div>
+			<div class="comment-form">
+				<textarea id="newComment" placeholder="Ваш комментарий..." rows="3"></textarea>
+				<button id="submitComment">Отправить</button>
+			</div>
+		</section>
+
+		
+<footer class="footer">
+	<section id="footer" class="footer-section">
+		<h3>О нас</h3>
+		<p>Цель — продвигать исскуство и его различные направления. Это не только сборники информации, но и ее смысл.
+			Здесь больше, чем искусство.</p>
+	</div>
+	<div class="footer-section">
+		<h3>Контакты</h3>
+		<p>Телефон: +7 (901) 972-14-03</p>
+		<p>Email: lollamatyusheva@gmail.com</p>
+		<p>Адрес: г. Санкт-Петербург, пер. Джамбула, д. 13</p>
+	</div>
+	<div class="footer-section subscription">
+		<h3>Подписка на новости</h3>
+		<p>Введите почту, чтобы получать свежие новости и анонсы выставок.</p>
+		<input type="email" id="subscribeEmail" class="subscribe-input" placeholder="Ваш email" />
+		<button id="subscribeBtn" class="subscribe-btn">Подписаться</button>
+		<p id="subscribeMessage" class="subscribe-message">Вы успешно подписались на новости!</p>
+	</div>
+	<div class="footer-copy">
+		<p>© 2025 Сюрреалисты. Все права защищены.</p>
+	</div>
+</footer>
+
+
+
+
+
+
+
+		<script>
+			const backToHome = document.getElementById("back-to-home");
+			
+			window.onscroll = function() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+			backToHome.style.display = "block";
+			} else {
+			backToHome.style.display = "none";
+			}
+			};
+			
+			backToHome.onclick = function() {
+			window.scrollTo({
+			top: 0,
+			behavior: 'smooth' 
+			});
+			};
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navDropdown = document.getElementById('nav-dropdown');
+
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', String(!expanded));
+            navDropdown.classList.toggle('show');
+        });
+
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                menuToggle.click();
+            }
+        });
+
+        document.querySelectorAll('#nav-dropdown button, nav ul a').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target') || btn.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                if (navDropdown.classList.contains('show')) {
+                    navDropdown.classList.remove('show');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        const periodButtons = document.querySelectorAll('#period-buttons button');
+        const periods = document.querySelectorAll('.period');
+
+        function showPeriod(id) {
+            periods.forEach(p => p.classList.remove('active'));
+            const target = document.getElementById(id);
+            if (target) target.classList.add('active');
+        }
+        showPeriod('period1');
+
+        periodButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const periodId = 'period' + btn.getAttribute('data-period');
+                showPeriod(periodId);
+            });
+        });
+
+        function updatePeriodButtonsDisplay() {
+            document.getElementById('period-buttons').style.display = 'flex';
+        }
+        window.addEventListener('resize', updatePeriodButtonsDisplay);
+        updatePeriodButtonsDisplay();
+
+document.querySelectorAll('.card').forEach(card => {
+  const btn = card.querySelector('.desc-btn');
+  const popup = card.querySelector('.description-popup');
+
+  const customText = card.getAttribute('data-description');
+  popup.innerHTML = `<p>${customText}</p>`;
+
+  function updateDisplay() {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      popup.style.display = 'none';
+
+      if (btn) {
+        btn.style.display = 'inline-block';
+
+        if (!btn.dataset.bound) {
+          btn.addEventListener('click', () => {
+            if (popup.style.display === 'none' || popup.style.display === '') {
+              popup.style.display = 'flex';
+              btn.innerText = 'Скрыть описание';
+            } else {
+              popup.style.display = 'none';
+              btn.innerText = 'Показать описание';
+            }
+          });
+          btn.dataset.bound = 'true'; 
+        }
+      }
+    } else {
+      popup.style.display = 'flex';
+
+      // скрываем кнопку
+      if (btn) {
+        btn.style.display = 'none';
+        btn.innerText = 'Показать описание';
+      }
+    }
+  }
+
+  window.addEventListener('load', updateDisplay);
+  window.addEventListener('resize', updateDisplay);
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.card-image-container') && !e.target.closest('.desc-btn')) {
+      if (window.innerWidth <= 768) {
+        if (popup.style.display === 'flex') {
+          popup.style.display = 'none';
+          if (btn) btn.innerText = 'Показать описание';
+        }
+      }
+    }
+  });
+});
+
+      const track = document.querySelector('.carousel-track');
+      const items = document.querySelectorAll('.gallery-item');
+      const popup = document.getElementById('popup-info');
+      const popupTitle = document.getElementById('popup-title');
+      const popupYear = document.getElementById('popup-year');
+      const popupDesc = document.getElementById('popup-desc');
+
+      let isPaused = false;
+      let currentTranslateX = 0;
+      let direction1 = -1; 
+
+      function autoScroll() {
+          if (isPaused) return;
+
+          const firstItem = items[0];
+          const itemWidth = firstItem.offsetWidth + 15;
+
+          currentTranslateX += direction1 * itemWidth;
+
+          const maxTranslate = track.scrollWidth - track.parentElement.offsetWidth;
+
+          if (currentTranslateX >= maxTranslate) {
+              currentTranslateX = maxTranslate;
+              direction1 = -1; 
+          } else if (currentTranslateX <= 0) {
+              currentTranslateX = 0;
+              direction1 = 1; 
+          }
+
+          track.style.transform = `translateX(-${currentTranslateX}px)`;
+      }
+
+      let intervalId1 = setInterval(autoScroll, 2000);
+
+      track.addEventListener('mouseenter', () => { isPaused = true; });
+      track.addEventListener('mouseleave', () => { isPaused = false; });
+
+      items.forEach(item => {
+          item.addEventListener('click', () => {
+              const title = item.querySelector('.caption').innerText;
+              const year = item.getAttribute('data-year');
+              const desc = item.getAttribute('data-description');
+
+              popupTitle.innerText = title;
+              popupYear.innerText = year;
+              popupDesc.innerText = desc;
+              popup.classList.add('show');
+          });
+      });
+
+      document.querySelector('.close-popup').addEventListener('click', () => {
+          popup.classList.remove('show');
+      });
+
+      const track2 = document.querySelector('.carousel-track2');
+      const items2 = document.querySelectorAll('.gallery-item2');
+      const popup2 = document.getElementById('popup-info2');
+      const popupTitle2 = document.getElementById('popup-title2');
+      const popupYear2 = document.getElementById('popup-year2');
+      const popupDesc2 = document.getElementById('popup-desc2');
+
+      let isPaused2 = false;
+      let totalWidth2 = track2.scrollWidth;
+      let containerWidth2 = track2.parentElement.offsetWidth;
+      let currentTranslateX2 = totalWidth2 - containerWidth2;
+      let direction2 = 1; 
+
+      function updateDimensions() {
+          totalWidth2 = track2.scrollWidth;
+          containerWidth2 = track2.parentElement.offsetWidth;
+      }
+      window.addEventListener('resize', updateDimensions);
+
+      function autoScroll2() {
+          if (isPaused2) return;
+
+          const firstItem = items2[0];
+          const itemWidth = firstItem.offsetWidth + 15;
+
+          currentTranslateX2 += direction2 * itemWidth;
+
+          if (currentTranslateX2 >= totalWidth2 - containerWidth2) {
+              currentTranslateX2 = totalWidth2 - containerWidth2;
+              direction2 = -1;
+          } else if (currentTranslateX2 <= 0) {
+              currentTranslateX2 = 0;
+              direction2 = 1;
+          }
+
+          track2.style.transform = `translateX(-${currentTranslateX2}px)`;
+      }
+
+      let intervalId2 = setInterval(autoScroll2, 2000);
+
+      track2.addEventListener('mouseenter', () => { isPaused2 = true; });
+      track2.addEventListener('mouseleave', () => { isPaused2 = false; });
+
+      items2.forEach(item => {
+          item.addEventListener('click', () => {
+            const title = item.querySelector('.caption2').innerText;
+            const year = item.getAttribute('data-year2');
+            const desc = item.getAttribute('data-description2');
+
+            document.getElementById('popup-title2').innerText = title;
+            document.getElementById('popup-year2').innerText = year;
+            document.getElementById('popup-desc2').innerText = desc;
+            
+            popup2.classList.add('show');
+          });
+        });
+
+        const closeBtn2 = document.querySelector('.close-popup2');
+        if (closeBtn2) {
+          closeBtn2.addEventListener('click', () => {
+            popup2.classList.remove('show');
+          });
+        }
+
+		</script>
+
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=301c8492-009d-4551-b7e6-ac10481a3e36"
+			type="text/javascript"></script>
+		<script>
+			let myMap, placemark;
+		
+		  function initMap() {
+		    ymaps.ready(() => {
+		      myMap = new ymaps.Map("map", {
+		        center: [50.8424, 4.3588], 
+		        zoom: 10,
+		        controls: ['zoomControl']
+		      });
+		
+		      myMap.events.add('click', function (e) {
+		        const coords = e.get('coords');
+		        if (placemark) {
+		          placemark.geometry.setCoordinates(coords);
+		        } else {
+		          placemark = new ymaps.Placemark(coords, {}, {
+		            draggable: true
+		          });
+		          myMap.geoObjects.add(placemark);
+		          
+		          placemark.events.add('dragend', () => {
+		            const newCoords = placemark.geometry.getCoordinates();
+		            console.log('Новое местоположение:', newCoords);
+		          });
+		        }
+		      });
+		      
+		      document.querySelectorAll('.address-btn').forEach(btn => {
+		        btn.addEventListener('click', () => {
+		          const lat = parseFloat(btn.getAttribute('data-lat'));
+		          const lon = parseFloat(btn.getAttribute('data-lon'));
+		          myMap.setCenter([lat, lon], 14);
+		          if (placemark) {
+		            placemark.geometry.setCoordinates([lat, lon]);
+		          } else {
+		            placemark = new ymaps.Placemark([lat, lon], {}, {
+		              draggable: true
+		            });
+		            myMap.geoObjects.add(placemark);
+		            placemark.events.add('dragend', () => {
+		              const newCoords = placemark.geometry.getCoordinates();
+		              console.log('Новое местоположение:', newCoords);
+		            });
+		          }
+		        });
+		      });
+		    });
+		  }
+		
+		  window.addEventListener('load', initMap);
+		</script>
+
+		<script>
+			const commentsList = document.getElementById('comments-list');
+		  const textarea = document.getElementById('newComment');
+		  const btnSend = document.getElementById('submitComment');
+		const localStorageAvatarKey = 'profileAvatar'; // ключ для хранения
+
+		  const currentUser = {
+ 			 name: 'ВЫ',
+  			avatar: localStorage.getItem('profileAvatar') || ''
+			};
+		
+		  const predefinedComments = [
+		    { author: 'Анастасия', avatar: 'профиль10.jpg', text: 'Как же я люблю, когда искусство заставляет задуматься!' },
+		    { author: 'Владимир', avatar: 'профиль2.jpg', text: '"Каждый раз, когда смотрю на "Сын человеческий", мурашки по коже. Что вы думаете о том, что скрыто под яблоком?' },
+		    { author: 'Евгений', avatar: 'профиль4.jpg', text: 'Стиль Магритта я узнаю везде.' },
+		    { author: 'Светлана', avatar: 'профиль1.jpg', text: 'Недавно прочитала, что Магритт часто использовал образы из своего детства. Не поверю ни за что... 😒' },
+		    { author: 'Джун', avatar: 'профиль7.jpg', text: 'Интересный подход к искусству, понравилось.' },
+		    { author: 'Ольга', avatar: 'профиль8.jpg', text: 'Я была в музее, где выставлены его работы, и это было просто волшебно! ✨ Кто-то из вас видел его картины вживую?' },
+		    { author: 'Дмитрий', avatar: 'профиль9.jpg', text: 'Пикассо лучше, имхо :/' },
+		    { author: 'Фейт', avatar: 'профиль6.jpg', text: 'Работы Рене Магритта всегда вызывают смешанные чувства: с одной стороны, его сюрреализм поражает воображение и заставляет задуматься о природе реальности, с другой — иногда кажется, что его образы слишком заумны и трудны для восприятия.' },
+		    { author: 'Алексей', avatar: 'профиль5.jpg', text: 'Впечатлило.' },
+		    { author: 'Елена', avatar: 'профиль3.jpg', text: 'Рекомендую всем!' }
+		  ];
+		
+			let allCommentsData = [];
+		
+		  function createComment({author, avatar, text, replyTo = null}) {
+		    const commentDiv = document.createElement('div');
+		    commentDiv.className = 'comment';
+		
+		    const headerDiv = document.createElement('div');
+		    headerDiv.className = 'comment-header';
+		
+		    const avatarImg = document.createElement('img');
+		    avatarImg.src = avatar;
+		    avatarImg.className = 'comment-avatar';
+		
+		    const infoDiv = document.createElement('div');
+		    infoDiv.className = 'comment-info';
+		
+		    const authorSpan = document.createElement('span');
+		    authorSpan.className = 'comment-author';
+		    authorSpan.innerText = author;
+		    infoDiv.appendChild(authorSpan);
+		
+		    if (replyTo) {
+		      const replyToSpan = document.createElement('div');
+		      replyToSpan.className = 'comment-reply-to';
+		      replyToSpan.innerText = `(@${replyTo.author})`;
+		      infoDiv.appendChild(replyToSpan);
+		    }
+		
+		    const actionsDiv = document.createElement('div');
+		    actionsDiv.className = 'comment-actions';
+		
+		    const likeBtn = document.createElement('button');
+		    likeBtn.innerHTML = `👍 <span class="like-count">0</span>`;
+		    likeBtn.dataset.liked = 'false';
+		    likeBtn.onclick = () => {
+		      const liked = likeBtn.dataset.liked === 'true';
+		      const dislikeBtn = likeBtn.nextElementSibling;
+		      if (!liked) {
+		        likeBtn.dataset.liked = 'true';
+		        likeBtn.querySelector('.like-count').innerText = '1';
+		        if (dislikeBtn.dataset.liked === 'true') {
+		          dislikeBtn.dataset.liked = 'false';
+		          dislikeBtn.querySelector('.dislike-count').innerText = '0';
+		        }
+		      } else {
+		        likeBtn.dataset.liked = 'false';
+		        likeBtn.querySelector('.like-count').innerText = '0';
+		      }
+		    };
+		
+		    const dislikeBtn = document.createElement('button');
+		    dislikeBtn.innerHTML = `👎 <span class="dislike-count">0</span>`;
+		    dislikeBtn.dataset.liked = 'false';
+		    dislikeBtn.onclick = () => {
+		      const disliked = dislikeBtn.dataset.liked === 'true';
+		      const likeBtnRef = dislikeBtn.previousElementSibling; // лайк — предыдущий
+		      if (!disliked) {
+		        dislikeBtn.dataset.liked = 'true';
+		        dislikeBtn.querySelector('.dislike-count').innerText = '1';
+		        if (likeBtnRef.dataset.liked === 'true') {
+		          likeBtnRef.dataset.liked = 'false';
+		          likeBtnRef.querySelector('.like-count').innerText = '0';
+		        }
+		      } else {
+		        dislikeBtn.dataset.liked = 'false';
+		        dislikeBtn.querySelector('.dislike-count').innerText = '0';
+		      }
+		    };
+		
+		    const replyBtn = document.createElement('button');
+        replyBtn.innerText = 'Ответить';
+
+        replyBtn.onclick = () => {
+            // Проверяем есть ли уже окно ответа
+            const existingReplyBox = commentDiv.querySelector('.reply-box');
+            if (existingReplyBox) {
+                existingReplyBox.remove();
+            } else {
+                const replyBox = document.createElement('div');
+                replyBox.className = 'reply-box';
+
+                const replyTextarea = document.createElement('textarea');
+                replyTextarea.rows = 2;
+                replyTextarea.placeholder = 'Ваш ответ...';
+
+                const replySend = document.createElement('button');
+                replySend.innerText = 'Отправить';
+
+                replySend.onclick = () => {
+                    if (replyTextarea.value.trim() !== '') {
+                        createComment({
+author: currentUser.name,
+                            avatar: currentUser.avatar,
+                            text: replyTextarea.value,
+                            replyTo: {author: author}
+                        });
+                        replyBox.remove();
+                    }
+                };
+
+                replyBox.appendChild(replyTextarea);
+                replyBox.appendChild(replySend);
+                commentDiv.appendChild(replyBox);
+            }
+        };
+		
+					const deleteBtn = document.createElement('button');
+					deleteBtn.innerText = 'Удалить';
+					deleteBtn.onclick = () => {
+					if (confirm('Удалить этот комментарий?')) {
+					const commentId = commentDiv.getAttribute('data-id');
+					if (commentId) {
+					allCommentsData = allCommentsData.filter(c => c.id !== commentId);
+					}
+					commentDiv.remove();
+					}
+					};
+		
+		    actionsDiv.appendChild(likeBtn);
+		    actionsDiv.appendChild(dislikeBtn);
+		    actionsDiv.appendChild(replyBtn);
+		    if (author === currentUser.name) {
+		      actionsDiv.appendChild(deleteBtn);
+		    }
+		
+		    headerDiv.appendChild(avatarImg);
+		    headerDiv.appendChild(infoDiv);
+		    headerDiv.appendChild(actionsDiv);
+		
+		    const textDiv = document.createElement('div');
+		    textDiv.className = 'comment-text';
+		    textDiv.innerText = text;
+		
+		    commentDiv.appendChild(headerDiv);
+		    commentDiv.appendChild(textDiv);
+		
+		    commentsList.appendChild(commentDiv);
+		
+		    allCommentsData.push({author, avatar, text});
+		  }
+		
+		  document.getElementById('submitComment').onclick = () => {
+		    const text = textarea.value.trim();
+		    if (text !== '') {
+		      createComment({
+		        author: currentUser.name,
+		        avatar: currentUser.avatar,
+		        text: text
+		      });
+		      textarea.value = '';
+		
+		      setTimeout(() => {
+		        for (let i=0; i<2; i++) {
+		          const randIndex = Math.floor(Math.random() * predefinedComments.length);
+		          createComment(predefinedComments[randIndex]);
+		        }
+		      }, 5000);
+		    }
+		  };
+		
+		  function addAutoComments() {
+		    for (let i=0; i<2; i++) {
+		      const randIndex = Math.floor(Math.random() * predefinedComments.length);
+		      setTimeout(() => {
+		        createComment(predefinedComments[randIndex]);
+		      }, Math.random() * 2000 + 3000);
+		    }
+		  }
+		  addAutoComments();
+
+			document.getElementById('subscribeBtn').onclick = () => {
+			const emailInput = document.getElementById('subscribeEmail');
+			const messageP = document.getElementById('subscribeMessage');
+			const email = emailInput.value.trim();
+			
+			const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			
+			if (email === '') {
+			alert('Пожалуйста, введите ваш email!');
+			} else if (!emailPattern.test(email)) {
+			alert('Пожалуйста, введите корректный email!');
+			} else {
+			messageP.style.display = 'block';
+			
+			emailInput.value = '';
+			}
+			};
+
+		</script>
+
+</body>
+</html>
